@@ -1,0 +1,389 @@
+@font-face{
+    font-family: 'Poppins';
+    src: url(font/Poppins/Poppins-Regular.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face{
+    font-family: 'Rubik';
+    src: url(font/Rubik/Rubik-Light.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+@font-face{
+    font-family: 'Rubik';
+    src: url(font/Rubik/Rubik-Medium.ttf);
+    font-style: normal;
+    font-weight: 200;
+}
+
+body{
+    margin: 0;
+    background: #011936;
+}
+
+.header {
+    position: relative;
+    background: #f4f3ee;
+    height: 70px;
+    text-align: right;
+    padding-top: 50px;
+    padding-right: 30px;
+    /* box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15); */
+}
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: black;
+    filter: blur(25px);
+    z-index: -1;
+}
+
+.header > a{
+    padding: 0 30px ;
+    font-family: 'Rubik', Courier, monospace;
+    color: black;
+    text-decoration: none;
+}
+
+.header > a:hover{
+    color: #FFA400;
+}
+
+#tradeMark{
+    position: absolute; bottom: 10px; width: 100%; text-align: center;
+}
+
+p, h1, h2, h6{
+    letter-spacing: 1px;
+    color: #f4f3ee;
+    line-height: 170%;
+    
+}
+
+p, h2, h6{
+    font-family: 'Rubik';
+    font-weight: 100;
+}
+
+h1{
+    font-family: 'Rubik';
+    font-weight: 200;
+}
+
+/* #box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    padding: 20px;
+    background: grey;
+}
+
+#box:before{
+    content: '';
+    position: absolute;
+    
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: white;
+    z-index: -1;
+}
+#box:after{
+    content: '';
+    position: absolute;
+    
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: white;
+    filter: blur(40px);
+    z-index: -2;
+} */
+
+/* #box:after, #box:before{
+    background: linear-gradient(235deg, #832161, #3D2645, #DA4167);
+} */
+
+.webContent, #profileImage, .blurredImage, .blurredImageText, .sliderContainer, .foodContainer{
+    animation: fadeIn 1s;
+}
+
+.webContent{
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.webContent hr, .foodContainer hr{
+    width: 50%;
+    border: 1px solid #ffa400;
+}
+
+.judul{
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+#profileDesc, #profileImage{
+    display:inline-block;
+}
+#profileDesc{
+    text-align: right;
+    width: 40%;
+    float: right;
+    padding-right: 5%;
+    padding-left: 10px;
+    padding-top: 120px;
+}
+#profileImage{
+    width: 35%;
+    height: 1000px;
+    /* vertical-align:top; */
+    margin-left: 75px;
+    position: relative;
+    /* text-align: center; */
+    /* align-items: center; */
+}
+#profileImage img{
+    width: 100%;
+    /* max-width: 600px; */
+    min-width: 475px;
+    float: right;
+    /* position: absolute; */
+    /* transform: translate(-10em, -20em) scale(0.5); */
+}
+
+span#nama{
+    font-size: 200%;
+}
+
+.sosmedButton{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px 10px;
+    background: #FFA400;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transition: all .2s;
+}
+.sosmedButton img{
+    width: 20px;
+}
+
+.sosmedButton:hover{
+    transform: scale(1.1);
+}
+
+.blurredImage{
+    width: 100vw;
+    height: 55vh;
+    background-image: url("images/bgHometown3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+}
+.blurredImageText{
+    text-align: center;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background-color: rgba(0,0,0, 0.4);
+    width: 50%;
+    height: 15%;
+}
+
+.blurredImageText h1{
+    font-size: 5vh;
+}
+
+#hometownDesc{
+    background-color: #f4f3ee;
+    height: 25vh;
+    padding: 50px;
+}
+
+#hometownDesc p{
+    color: #011936;
+    width: 50%;
+    margin: auto;
+}
+
+/* .foodContainer{
+    width: 100vw;
+    height: 100vw;
+}
+.foodLeft, .foodRight{
+    margin-bottom: 25px;
+}
+.foodContainer h2{
+    margin: 0;
+    font-weight: 200;
+}
+
+.foodRight > .foodPic{
+    position: absolute;
+    right: 4%;
+}
+
+.foodLeft > .foodPic{
+    float: left;
+    
+}
+.foodLeft > .foodPic, .foodRight > .foodPic{
+    background-image: url(images/bgHometown.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 300px;
+    width: 45%;
+}
+
+.foodLeft > .foodDesc{
+    display: inline-block;
+    float: right;
+    text-align: right;
+    margin: 0;
+}
+.foodDesc{
+    padding: 20px 100px;
+    width: 30%;
+}
+
+.pembatasKiri{
+    float: left;
+}
+
+.pembatasKanan{
+    float: right;
+}
+
+.pembatasKiri, .pembatasKanan
+{
+    height: 1300px;
+    width: 5%;
+    background-color: #f4f3ee;
+} */
+
+.foodContainer{
+    display: grid;
+    grid-template: 50vh 50vh / 5% 45% 45% 5%;
+    /* grid-gap: 10px; */
+    /* background-color: #011936; */
+    /* padding: 10px; */
+}
+.foodContainer > div {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    padding: 20px 0;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+}
+.foodDescRight h2, .foodDescLeft h2{
+    font-weight: 200;
+    color: #FFA400;
+}
+.foodDescRight h2, .foodDescRight p{
+    text-align: left;
+    padding: 0px 40px;
+}
+
+.foodDescLeft h2, .foodDescLeft p{
+    text-align: right;
+    padding: 0px 40px;
+}
+
+.foodContainer .pembatas{
+    /* background-color: #f4f3ee; */
+}
+
+.sliderContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+}
+
+.sliderWrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.innerWrapper{
+    width: 400%;
+    height: 100%;
+    position: relative;
+    left: -100%;
+}
+
+.slideContent{
+    width: calc(100% / 4);
+    height: 100%;
+    float: left;
+    background-color: #f4f3ee;
+}
+
+.prevButton, .nextButton{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 15%;
+    border-top: 2px solid red;
+    cursor: pointer;
+}
+
+.prevButton{
+    border-left: 2px solid red;
+    left: 5%;
+    transform: rotate(315deg);
+}
+
+.nextButton{
+    border-right: 2px solid red;
+    right: 5%;
+    transform: rotate(45deg);
+}
+
+.contentImg{
+    height: 46vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.contentDesc{
+    text-align: center;
+    font-weight: 200;
+    margin: auto auto;
+    width: 50%;
+}
+.contentDesc h2, .contentDesc p{
+    color: #011936;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
